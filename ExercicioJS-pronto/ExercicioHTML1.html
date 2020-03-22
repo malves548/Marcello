@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Novo Parágrafo</title>
+	<style>
+		.classelegal {
+			border: solid black 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Exemplo</h1>
+	<p id="firstP">Primeiro Paragráfo</p>
+	<p id="firstP2">Segundo Paragráfo</p>
+	<p id="firstP3">Terceiro Paragráfo</p>
+	<input id="caixa1" type="number">
+	<input id="caixa2" type="number">
+	<button onclick="pow(caixa1.value,caixa2.value)">potencia</button>
+	<button onclick="max(caixa1.value,caixa2.value)">maximo</button>
+	<p>
+		<button onclick="soma()">soma salario</button>
+	</p>
+</body>
+
+<script>
+	function min_um(a, b) {
+		return (a <= b) ? a : b
+	}
+
+	function min_dois(a, b) {
+		let result = null
+		if (a <= b) {
+			result = a
+		}
+		else {
+			result = b
+		}
+		return result;
+	}
+
+	let result = min_um(10, 20);
+	//alert(result);
+
+	function pow(x, y) {
+		let resultado = Math.pow(x, y)
+		console.log
+		return alert(resultado)
+	}
+
+	function max(x, y) {
+		if (x >= y) {
+			resultadomax = x
+		}
+		else {
+			resultadomax = y
+		}
+		return alert(resultadomax)
+	}
+	//exercicio 5
+	let aluno = []
+	aluno.nome = "Marcello"
+	console.log(aluno) //1
+	aluno.sobrenome = "Alves"
+	console.log(aluno) //2 
+	aluno.nome = "Débora"
+	console.log(aluno) //3
+	delete aluno.nome
+	console.log(aluno) //4
+	console.log(aluno.time) //5
+
+	let salarios = {
+		Neymar: 100,
+		Ronaldinho: 160,
+		Ronaldo: 130,
+	}
+	function soma() {
+		let resultadoSoma = salarios.Neymar + salarios.Ronaldinho + salarios.Ronaldo
+		alert(resultadoSoma)
+	}
+</script>
+
+</html>

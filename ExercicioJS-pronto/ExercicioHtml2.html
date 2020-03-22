@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Página Inicial</h1>
+    <p id="paragrafo">Exemplo de aula <span>teste</span> Exemplo de aula <span>Lorem <strong>negrito<strong></span>
+        Exemplo de aula</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li id="item">Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ul>
+</body>
+<script>
+    function ex1() {
+        console.log(document.getElementById("paragrafo").innerText);
+    }
+    function ex2() {
+        console.log(document.querySelector("span:nth-child(1)").innerText);
+        console.log(document.querySelector("span:nth-child(2)").innerText);
+    }
+    let getelement = document.querySelector("ul");
+    function ex3() {
+        let node = document.createElement("LI");
+        let textnode = document.createTextNode("Item 9");
+        node.appendChild(textnode);
+        getelement.appendChild(node);
+    }
+    function exibirInnerHTML() {
+        let node2 = document.createElement("LI");
+        let textnode2 = document.createTextNode("Item 10");
+        node2.appendChild(textnode2);
+        getelement.appendChild(node2);
+        console.log(node2.innerHTML);
+        console.log(document.getElementsByTagName("p").paragrafo.innerHTML);
+        console.log(document.getElementsByTagName("strong")[0].innerHTML);
+        console.log(document.getElementsByTagName("li")[2].id = item.innerHTML)
+    }
+    window.onload = function () {
+        ex1()
+        ex2()
+        ex3()
+        exibirInnerHTML()
+    }
+</script>
+
+</html>
